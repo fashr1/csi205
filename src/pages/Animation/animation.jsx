@@ -100,11 +100,11 @@ const Animation = () => {
                     <span className="bi bi-play">&nbsp;RUN</span>
                 </button>
                 <button className="btn btn-secondary" onClick={() => changeBallImage('')}>None</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/basketball.jpg')}>Basketball</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/football.jpg')}>Football</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/volleyball.jpg')}>Voleyball</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/human.jpg')}>Human</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/cartoon.png')}>Cartoon</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/basketball.jpg')}>Basketball</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/football.jpg')}>Football</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/volleyball.jpg')}>Voleyball</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/human.jpg')}>Human</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/cartoon.png')}>Cartoon</button>
             </div>
             <h3><div className="student">67133473 นายประสบการณ์ ผมพันธ์</div></h3>
         </div>
