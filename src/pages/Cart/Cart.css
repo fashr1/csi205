@@ -1,0 +1,164 @@
+.cart-page {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9fafc;
+  min-height: 10vh;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ✅ โครงร่างสินค้าในตะกร้า */
+.cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+/* ✅ กล่องสินค้าแต่ละชิ้น */
+.cart-card {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  border-radius: 14px;
+  width: 220px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ✅ พื้นที่รูปสินค้า */
+.cart-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  line-height: 150px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.cart-card:hover .cart-image {
+  transform: scale(1.05);
+}
+
+/* ✅ สีพื้นหลังสินค้า (ไม่ซ้ำกัน) */
+.cart-card:nth-child(1) .cart-image { background-color: #cce5ff; } /* ฟ้าอ่อน */
+.cart-card:nth-child(2) .cart-image { background-color: #d4edda; } /* เขียวอ่อน */
+.cart-card:nth-child(3) .cart-image { background-color: #fff3cd; } /* เหลืองอ่อน */
+.cart-card:nth-child(4) .cart-image { background-color: #f8d7da; } /* ชมพูอ่อน */
+.cart-card:nth-child(5) .cart-image { background-color: #e2d9f3; } /* ม่วงอ่อน */
+.cart-card:nth-child(6) .cart-image { background-color: #d1ecf1; } /* ฟ้าอมเขียว */
+.cart-card:nth-child(7) .cart-image { background-color: #fde2e4; } /* พีช */
+.cart-card:nth-child(8) .cart-image { background-color: #e2f0cb; } /* เขียวมินต์ */
+
+/* วนซ้ำสีถ้ามีสินค้าเกิน 8 */
+.cart-card:nth-child(8n+1) .cart-image { background-color: #cce5ff; }
+.cart-card:nth-child(8n+2) .cart-image { background-color: #d4edda; }
+.cart-card:nth-child(8n+3) .cart-image { background-color: #fff3cd; }
+.cart-card:nth-child(8n+4) .cart-image { background-color: #f8d7da; }
+.cart-card:nth-child(8n+5) .cart-image { background-color: #e2d9f3; }
+.cart-card:nth-child(8n+6) .cart-image { background-color: #d1ecf1; }
+.cart-card:nth-child(8n+7) .cart-image { background-color: #fde2e4; }
+.cart-card:nth-child(8n+8) .cart-image { background-color: #e2f0cb; }
+
+/* ✅ ข้อมูลสินค้า */
+.cart-info {
+  margin-top: 10px;
+}
+
+.cart-description {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.cart-price {
+  font-weight: bold;
+  color: #111;
+}
+
+/* ✅ ปุ่มลบสินค้า */
+.remove-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #d43f3f;
+  transform: scale(1.05);
+}
+
+/* ✅ สรุปยอดรวม */
+.cart-summary {
+  margin-top: 25px;
+  font-size: 1rem;
+}
+
+.item-count {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin: 0 5px;
+}
+
+.total-price {
+  background-color: #28a745;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-left: 5px;
+}
+
+/* ✅ ปุ่มดำเนินการ */
+.cart-actions {
+  margin-top: 15px;
+}
+
+.checkout-btn {
+  background-color: #ffc107;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: all 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.clear-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-btn:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
