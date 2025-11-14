@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './Animation.css';
 
+// Import images from public folder
+import basketballImg from '/basketball.jpg';
+import footballImg from '/football.jpg';
+import volleyballImg from '/volleyball.jpg';
+import humanImg from '/human.jpg';
+import cartoonImg from '/cartoon.png';
+import textureImg from '/transparent-background-png-concrete-texture-design_53876-1012480.jpg';
+
 // global constants
 const fieldWidth = 1000;
 const fieldHeight = 550;
@@ -88,6 +96,23 @@ const Animation = () => {
         setBallImage(image);
     };
 
+    const getImageSrc = (type) => {
+        switch (type) {
+            case 'basketball':
+                return basketballImg;
+            case 'football':
+                return footballImg;
+            case 'volleyball':
+                return volleyballImg;
+            case 'human':
+                return humanImg;
+            case 'cartoon':
+                return cartoonImg;
+            default:
+                return '';
+        }
+    };
+
     return (
         <div id="container">
             <div id="field">
@@ -100,11 +125,11 @@ const Animation = () => {
                     <span className="bi bi-play">&nbsp;RUN</span>
                 </button>
                 <button className="btn btn-secondary" onClick={() => changeBallImage('')}>None</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/basketball.jpg')}>Basketball</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/football.jpg')}>Football</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/volleyball.jpg')}>Voleyball</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/human.jpg')}>Human</button>
-                <button className="btn btn-outline-primary" onClick={() => changeBallImage('/csi205/cartoon.png')}>Cartoon</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage(getImageSrc('basketball'))}>Basketball</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage(getImageSrc('football'))}>Football</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage(getImageSrc('volleyball'))}>Voleyball</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage(getImageSrc('human'))}>Human</button>
+                <button className="btn btn-outline-primary" onClick={() => changeBallImage(getImageSrc('cartoon'))}>Cartoon</button>
             </div>
             <h3><div className="student">67133473 นายประสบการณ์ ผมพันธ์</div></h3>
         </div>
