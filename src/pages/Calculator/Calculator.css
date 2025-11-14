@@ -1,0 +1,89 @@
+.calculator-page * {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  /* ↑ เพิ่มขนาดตัวอักษร */
+}
+
+/* กล่องเครื่องคิดเลข */
+.calculator-page .cal-container {
+  background: linear-gradient(135deg, #a0e9ff);
+  margin: 2rem auto;
+  width: fit-content;
+  padding: 2rem 2.5rem;
+  /* ↑ เพิ่มพื้นที่ภายใน */
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  /* ✅ ขยายทั้งเครื่องคิดเลข */
+  transform-origin: top center;
+  /* ให้อยู่กึ่งกลางเมื่อขยาย */
+}
+
+/* หน้าจอแสดงผล */
+.calculator-page .cal-screen {
+  border: none;
+  border-radius: 18px;
+  text-align: right;
+  padding: 1rem 1.2rem;
+  /* ↑ เพิ่ม padding */
+  background: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  /* ↑ เพิ่มขนาดตัวอักษรในหน้าจอ */
+  color: #333;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+/* ปุ่มหลัก */
+.calculator-page .cal-btn-blue,
+.calculator-page .cal-btn-red,
+.calculator-page .cal-btn-pink {
+  width: 4rem;
+  /* ↑ ขยายปุ่ม */
+  height: 4rem;
+  /* ↑ ขยายปุ่ม */
+  margin: 0.4rem;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  /* ↑ ขนาดตัวหนังสือบนปุ่ม */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* สีปุ่ม */
+.calculator-page .cal-btn-blue {
+  background: linear-gradient(135deg, #46a6ff, #00d4ff);
+}
+
+.calculator-page .cal-btn-red {
+  background: linear-gradient(135deg, #ff4e50, #f9d423);
+}
+
+.calculator-page .cal-btn-pink {
+  background: linear-gradient(135deg, #ff6fa1, #ff0000);
+}
+
+/* Hover effect */
+.calculator-page .cal-btn-blue:hover,
+.calculator-page .cal-btn-red:hover,
+.calculator-page .cal-btn-pink:hover {
+  transform: scale(1.15);
+  filter: brightness(1.25);
+}
+
+/* ชื่อผู้จัดทำ */
+.calculator-page .student {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  /* ↑ ตัวใหญ่ขึ้น */
+  margin-top: 25px;
+  color: #000000;
+  opacity: 0.9;
+}
